@@ -1,6 +1,8 @@
+import { ErrorBoundary } from '@/components/common/error-boundary';
+import { MainLayout } from '@/components/layout/main-layout';
+import { ProtectedLayout } from '@/components/layout/protected-layout';
+import { PublicLayout } from '@/components/layout/public-layout';
 import { createBrowserRouter } from 'react-router-dom';
-import { ProtectedLayout } from '../components/layout/protected-layout';
-import { PublicLayout } from '../components/layout/public-layout';
 import { About } from './about';
 import { Home } from './home';
 import { SignIn } from './sign-in';
@@ -12,12 +14,19 @@ export const router = createBrowserRouter(
       element: <ProtectedLayout />,
       children: [
         {
-          path: '/',
-          element: <Home />,
-        },
-        {
-          path: '/about',
-          element: <About />,
+          element: <MainLayout />,
+          children: [
+            {
+              path: '/',
+              errorElement: <ErrorBoundary />,
+              element: <Home />,
+            },
+            {
+              path: '/about',
+              errorElement: <ErrorBoundary />,
+              element: <About />,
+            },
+          ],
         },
       ],
     },
@@ -25,12 +34,17 @@ export const router = createBrowserRouter(
       element: <PublicLayout />,
       children: [
         {
-          path: '/sign-in',
-          element: <SignIn />,
-        },
-        {
-          path: '/sign-up',
-          element: <SignUp />,
+          errorElement: <ErrorBoundary />,
+          children: [
+            {
+              path: '/sign-in',
+              element: <SignIn />,
+            },
+            {
+              path: '/sign-up',
+              element: <SignUp />,
+            },
+          ],
         },
       ],
     },
