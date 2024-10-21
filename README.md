@@ -1,4 +1,4 @@
-# React + TypeScript + Vite + Tailwind CSS + shadcn/ui Boilerplate
+# React + TypeScript + Vite + Tailwind CSS Boilerplate
 
 A minimal and efficient boilerplate for building modern web applications with **React**, **TypeScript**, **Vite**, **Tailwind CSS**, and **shadcn/ui**. This setup provides a fast and scalable development environment with a focus on styling and UI components.
 
