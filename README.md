@@ -1,50 +1,102 @@
-# React + TypeScript + Vite
+# React + TypeScript + Vite + Tailwind CSS + shadcn/ui Boilerplate
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A minimal and efficient boilerplate for building modern web applications with **React**, **TypeScript**, **Vite**, **Tailwind CSS**, and **shadcn/ui**. This setup provides a fast and scalable development environment with a focus on styling and UI components.
 
-Currently, two official plugins are available:
+## Key Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ⚡ **Vite**: Super-fast development server and build tool.
+- 🛠 **TypeScript**: Strict type-checking for better code management.
+- 🎨 **Tailwind CSS**: Utility-first CSS framework for rapid UI development.
+- 🧩 **shadcn/ui**: Pre-built, customizable, and accessible UI components.
+- 💅 **ESLint & Prettier**: Enforces consistent code quality and formatting.
+- 🚀 **Optimized production build**: Ready for deployment.
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **React**: Component-based UI library for building user interfaces.
+- **TypeScript**: Type-safe JavaScript for scalable, maintainable code.
+- **Tailwind CSS**: Utility-first CSS framework for styling.
+- **Vite**: Fast development server and build tool.
+- **shadcn/ui**: Component library for quickly building modern UIs.
 
-- Configure the top-level `parserOptions` property like this:
+## How to Get Started
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+Follow these instructions to get the project up and running locally.
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/hungds99/react-typescript-boilerplate.git
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### 2. Navigate into the project directory
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+cd react-typescript-boilerplate
 ```
+
+### 3. Install dependencies
+
+Make sure **Node.js** is installed. Then, install the required dependencies:
+
+Using **npm**:
+
+```bash
+npm install
+```
+
+### 4. Start the development server
+
+Run the development server and start building your app:
+
+Using **npm**:
+
+```bash
+npm run dev
+```
+
+This will start the server at [http://localhost:5173](http://localhost:5173). Open this URL in your browser to see the running app.
+
+### 5. Build for production (optional)
+
+When you're ready to build your app for production:
+
+Using **npm**:
+
+```bash
+npm run build
+```
+
+The production build will be generated in the `dist` folder.
+
+### 6. Preview the production build
+
+To preview the production build locally:
+
+Using **npm**:
+
+```bash
+npm run preview
+```
+
+This will serve the build at [http://localhost:4173](http://localhost:4173).
+
+## Deployment
+
+### Deploying to Vercel
+
+You can easily deploy this project using [Vercel](https://vercel.com/):
+
+1. Push your code to GitHub.
+2. Go to [Vercel](https://vercel.com/), connect your GitHub account, and import your repository.
+3. Follow the steps to deploy. Vercel will automatically build and deploy the app for you.
+
+Alternatively, you can deploy the `dist` folder to any static hosting service like [Netlify](https://www.netlify.com/) or [GitHub Pages](https://pages.github.com/).
+
+## Contributing
+
+Contributions are welcome! If you'd like to contribute, feel free to fork the repository and submit a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
